@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ship_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ship.js */ \"./src/ship.js\");\n\nvar x = (0,_ship_js__WEBPACK_IMPORTED_MODULE_0__.ship)(3);\nconsole.log(x.length);\n\n//# sourceURL=webpack://battleshipgame/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ship_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ship.js */ \"./src/ship.js\");\n\nvar x = (0,_ship_js__WEBPACK_IMPORTED_MODULE_0__.ship)(1);\nconsole.log(x.isHit());\nconsole.log(x.isSunk());\n\n//# sourceURL=webpack://battleshipgame/./src/index.js?");
 
 /***/ }),
 
