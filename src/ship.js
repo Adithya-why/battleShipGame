@@ -2,13 +2,15 @@ const ship = function(lent=0,hit=0,sunkk=false){
     let length = lent;
     let hits = hit;
     let sunk = sunkk;
-
+    //creates a ship object
 
     const isHit = function(){
         hits = hits + 1;
         return hits;
     }
 
+    
+    
     const isSunk  = function(){
         if(hits>=length){
             sunk = true;
