@@ -30,4 +30,5 @@ const ship = function(lent=0,hit=0,sunkk=false){
 
 
 
+
 export{ship};

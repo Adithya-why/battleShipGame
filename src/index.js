@@ -1,5 +1,6 @@
 import {ship} from './ship.js';
 
 
-let x = ship(3);
-console.log(x.length);
+let x = ship(1);
+console.log(x.isHit());
+console.log(x.isSunk());
