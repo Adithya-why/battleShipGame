@@ -1,0 +1,29 @@
+{
+  "name": "battleshipgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adithya-why/battleShipGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adithya-why/battleShipGame/issues"
+  },
+  "homepage": "https://github.com/Adithya-why/battleShipGame#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
