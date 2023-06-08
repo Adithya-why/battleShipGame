@@ -1,12 +1,9 @@
-import './styles/main.css';
-
-
-console.log("Hi");
-
-function hi(){
-    return "hello";
+const func = function(){
+ 
+ 
+ 
+    return "hi";
 }
 
 
-let x = hi();
-console.log(hi());
+export {func};
