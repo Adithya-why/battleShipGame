@@ -1,4 +1,4 @@
-const ship = function(lent,hit=0,sunkk=false){
+const ship = function(lent=0,hit=0,sunkk=false){
     let length = lent;
     let hits = hit;
     let sunk = sunkk;

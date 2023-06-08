@@ -13,3 +13,8 @@ test('hit func works',()=>{
 
     expect(x.isHit()).toBe(2);
 })
+
+
+test('issunk works',()=>{
+    expect(ship(2,0).isSunk()).toBe(false);
+})
