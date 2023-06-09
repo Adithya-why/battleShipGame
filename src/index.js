@@ -5,7 +5,9 @@ import {computerPlayer} from './computerPlayer.js';
 import css from './styles/main.css';
 import { displayBoard } from './displayStuff.js';
 
-
+//this file handles game loops
+//creates player and gamboards
+//and handles interaction between them
 console.log("imports sucess");
 
 const game = function(){
