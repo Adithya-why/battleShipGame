@@ -7,6 +7,7 @@ const gameBoard = function(){
     let missed = [];
     let nMissed = 0;
     let ships = [];
+    let slocs = [];
 
     for(let i = 0;i<10;i++){
         for(let j=0;j<10;j++){
@@ -21,12 +22,21 @@ const gameBoard = function(){
         return board;
     }
 
+    
 
-    const placeShip = function(x,y,length){
-        let tempShip = ship(length);
+
+    const placeShip = function(x,y,length,or="row"){
+        let tempShip = ship(length,0,false,'row');
         board[`${x}${y}`] = tempShip;
         ships.push(board[`${x}${y}`]);
+        slocs.push([x,y]);
+        
         return board;
+    }
+
+
+    const getSlocs = function(){
+        return slocs;
     }
  
 
@@ -45,6 +55,10 @@ const gameBoard = function(){
 
     }
 
+
+    const getShip = function(){
+        return ships;
+    }
 
     const getMisses = function(){
         return nMissed;
@@ -66,7 +80,7 @@ const gameBoard = function(){
 
         return alSunk;
     }
-    return {getBoard,placeShip,receiveHit,allSunk};
+    return {getBoard,placeShip,receiveHit,allSunk,getShip,getSlocs};
 }
 
 

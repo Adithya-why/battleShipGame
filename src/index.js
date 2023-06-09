@@ -15,8 +15,10 @@ const game = function(){
     const player1 = player();
     const player2 =  computerPlayer();
 
-
-   // console.log(gb1.getBoard());
+    gb1.placeShip(1,1,2,"row");
+    //gb1.placeShip(7,3,4);
+    //gb1.placeShip(0,4,7);
+    console.log(gb1.getBoard());
     displayBoard(gb1,"gb1");
     displayBoard(gb2,"gb2");
     

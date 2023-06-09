@@ -1,7 +1,8 @@
-const ship = function(lent=0,hit=0,sunkk=false){
+const ship = function(lent=0,hit=0,sunkk=false,or="row"){
     let length = lent;
     let hits = hit;
     let sunk = sunkk;
+    let ori = or;
     //creates a ship object
 
     const isHit = function(){
@@ -24,7 +25,7 @@ const ship = function(lent=0,hit=0,sunkk=false){
     }
 
 
-    return {length,isSunk,isHit}
+    return {length,isSunk,isHit,ori}
 
 
 
