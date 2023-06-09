@@ -10,11 +10,15 @@
 }
 
 
-.gb1.board{
+.gb1.board,.gb2.board{
     display: grid;
     grid-template-columns: repeat(10,1fr);
     width: 50%;
     height: 100%;
+}
+
+.gb2.board>div{
+    background-color: lightcoral;
 }
 
 

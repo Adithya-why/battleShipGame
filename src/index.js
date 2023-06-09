@@ -18,6 +18,7 @@ const game = function(){
 
    // console.log(gb1.getBoard());
     displayBoard(gb1,"gb1");
+    displayBoard(gb2,"gb2");
     
 
 }
