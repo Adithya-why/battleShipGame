@@ -2,6 +2,8 @@ import {ship} from './ship.js';
 import {gameBoard} from './gameBoard.js';
 import {player} from './player.js'; 
 import {computerPlayer} from './computerPlayer.js';
+import css from './styles/main.css';
+import { displayBoard } from './displayStuff.js';
 
 
 console.log("imports sucess");
@@ -14,11 +16,8 @@ const game = function(){
     const player2 =  computerPlayer();
 
 
-    console.log(gb1.getBoard());
-    console.log(gb1.placeShip(0,1,2));
-    console.log(gb1.allSunk());
-    gb1.receiveHit(0,1);
-    console.log(gb1.allSunk());
+   // console.log(gb1.getBoard());
+    displayBoard(gb1,"gb1");
     
 
 }
