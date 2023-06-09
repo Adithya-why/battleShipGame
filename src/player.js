@@ -24,3 +24,6 @@ const player = function(enemyGameBoard){
     
 return {attack};
 }
+
+
+export{player};
