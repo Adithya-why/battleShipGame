@@ -6,8 +6,8 @@ import { gameBoard } from "./gameBoard.js";
 const player = function(enemyGameBoard){
     let attacked = [];
     const attack = function(x,y){
-    let x = 0;
-    let y = 0;
+    x = 0;
+    y = 0;
    
     let pre = false;
     for(let i = 0;i<attacked.length;i++){
