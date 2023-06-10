@@ -39,7 +39,7 @@ const gameBoard = function(){
     //creates a ship with given length and orinetation
     //inserts that ship to the given location
     const placeShip = function(x,y,length,or="row"){
-        let tempShip = ship(length,0,false,'row');
+        let tempShip = ship(length,0,false,or);
 
         //inserts to board
         board[`${x}${y}`] = tempShip;

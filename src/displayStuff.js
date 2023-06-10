@@ -23,6 +23,9 @@ const displayBoard = function(gboard,cname){
 
             div.classList.add(`${i}${j}`);
 
+            //ads an id
+            div.setAttribute('id',`${cname}${i}${j}`);
+
             //appaende to parent div
             boardDiv.appendChild(div);
         }
@@ -48,9 +51,27 @@ const displayBoard = function(gboard,cname){
         let l = sh.length;
         if(ori=="row"){
             for(let f = 0;f<l;f++){
-                let locstr = `${loc[0]}${loc[1]+f}`;
-                //let temp = document.querySelector(`.bd.${cname}.${locstr}`);
-                //temp.classList.add('ship');
+                //let locstr = `${loc[0]}${loc[1]+f}`;
+                //console.log(locstr);
+
+                //it selects the startin square of ship and adds class ship
+                //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
+                let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
+                temp.classList.add('ship');
+
+            }
+        }
+        //if column ship
+        //same procedure, but the next square is found by adding to the first coordinate
+        if(ori=="column"){
+            for(let f = 0;f<l;f++){
+                //let locstr = `${loc[0]}${loc[1]+f}`;
+                //console.log(locstr);
+
+                //it selects the startin square of ship and adds class ship
+                //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
+                let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
+                temp.classList.add('ship');
 
             }
         }
