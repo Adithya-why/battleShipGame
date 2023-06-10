@@ -11,6 +11,7 @@ import { displayBoard } from './displayStuff.js';
 console.log("imports sucess");
 
 const game = function(){
+    let turn = "p1";
     const gb1 = gameBoard();
     const gb2 = gameBoard();
 
@@ -21,10 +22,13 @@ const game = function(){
     gb1.placeShip(2,3,4,"row");
     gb2.placeShip(3,1,5,"column");
     
-    //gb1.placeShip(7,3,4);
-    //gb1.placeShip(0,4,7);
+    
     console.log(gb1.getBoard());
+
+    
     displayBoard(gb1,"gb1");
+    
+    
     displayBoard(gb2,"gb2");
     
 

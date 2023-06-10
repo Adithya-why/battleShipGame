@@ -77,6 +77,28 @@ const displayBoard = function(gboard,cname){
         }
     }
 
+
+    lis(gboard,cname);
+    
+
+}
+
+//function to to make an attack when a box is clicked
+
+const lis = function(gboard,cname){
+    let board = gboard.getBoard();
+    for(let i = 0;i<10;i++){
+        for(let j = 0;j<10;j++){
+            let ele = document.querySelector(`#${cname}${i}${j}`);
+            ele.addEventListener('click',function(e){
+                let c = (e.target.classList)[2];
+                ele.classList.add('missedAttack');
+                let targetSquare = board[c];
+                console.log(targetSquare);
+                
+            })
+        }
+    }
     
 
 }
