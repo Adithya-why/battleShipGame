@@ -42,7 +42,32 @@ const gameBoard = function(){
         let tempShip = ship(length,0,false,or);
 
         //inserts to board
-        board[`${x}${y}`] = tempShip;
+        //board[`${x}${y}`] = tempShip;
+        //to insert ship in consecutive blocks
+        //if ship length longer than 1, other squares must have shipn object as well
+
+        //basically inserts the ship object to all the squares it takes in the board
+        if(or=="row"){
+        for(let i = 0;i<length;i++){
+            board[`${x}${y+i}`] = tempShip;
+            //console.log(x,y+i);
+        }
+
+
+    }
+
+
+
+    if(or=="column"){
+        for(let i = 0;i<length;i++){
+            board[`${x+i}${y}`] = tempShip;
+        }
+
+
+    }
+
+
+
 
         //keeps tracks of the ship and location
         ships.push(board[`${x}${y}`]);

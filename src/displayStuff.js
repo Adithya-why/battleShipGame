@@ -49,6 +49,8 @@ const displayBoard = function(gboard,cname){
         let sh = ships[k];
         let ori = sh.ori;
         let l = sh.length;
+
+        
         if(ori=="row"){
             for(let f = 0;f<l;f++){
                 //let locstr = `${loc[0]}${loc[1]+f}`;
@@ -58,6 +60,8 @@ const displayBoard = function(gboard,cname){
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
                 let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
                 temp.classList.add('ship');
+
+                
 
             }
         }
