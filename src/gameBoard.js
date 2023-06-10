@@ -69,7 +69,7 @@ const gameBoard = function(){
 
 
 
-        //keeps tracks of the ship and location
+        //keeps tracks of the ship and location(start location)
         ships.push(board[`${x}${y}`]);
         slocs.push([x,y]);
         //returns the updated board

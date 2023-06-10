@@ -20,7 +20,7 @@ const game = function(){
 
     gb1.placeShip(1,1,2,"row");
     gb1.placeShip(2,3,4,"row");
-    //gb2.placeShip(3,1,5,"column");
+    gb2.placeShip(3,1,5,"column");
     
     
     console.log(gb1.getBoard());
