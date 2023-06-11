@@ -29,10 +29,11 @@ const computerPlayer = function(enemyGameBoard){
     
 
     //then the given location is attacked
-    enemyGameBoard.receiveHit(x,y);
-
+    //enemyGameBoard.receiveHit(x,y);
     //attacked location is kept track of
     attacked.push([x,y]);
+    return [x,y];
+
     
 }
     
