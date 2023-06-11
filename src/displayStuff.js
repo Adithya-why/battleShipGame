@@ -106,7 +106,7 @@ const lis = function(gboard,cname){
                 console.log(x,y);
                 gboard.receiveHit(x,y);
                 console.log(gboard.getMisses());
-                
+                console.log(gboard.allSunk());
                 
             })
         }
