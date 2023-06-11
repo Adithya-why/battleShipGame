@@ -5,7 +5,7 @@
 const displayBoard = function(gboard,cname){
     //gets the board object
     let board = gboard.getBoard();
-    console.log(gboard);
+    //console.log(gboard);
     //selects the div where gameboard is to be displayed
     let boardDiv = document.querySelector(`.board.${cname}`);
 
@@ -33,12 +33,12 @@ const displayBoard = function(gboard,cname){
     
     }
     //let element = document.querySelector(".bd.gb1.11");
-    console.log("passed");
+    //console.log("passed");
     
     //this section gets the ships and locations of ships
     let shipLocs = gboard.getSlocs();
     let ships = gboard.getShip();
-    console.log(shipLocs);
+    //console.log(shipLocs);
 
     //tries to add a ship class to all the loactions where ships is present
     //shiplocs only has the starting grid od ship
@@ -105,8 +105,10 @@ const lis = function(gboard,cname){
                 let y = c.split("")[1];
                 console.log(x,y);
                 gboard.receiveHit(x,y);
-                console.log(gboard.getMisses());
+                //console.log(gboard.getMisses());
                 console.log(gboard.allSunk());
+                ele.style.pointerEvents = "none";
+
                 
             })
         }
