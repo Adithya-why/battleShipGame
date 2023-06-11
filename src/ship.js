@@ -22,6 +22,7 @@ const ship = function(lent=0,hit=0,sunkk=false,or="row"){
     //also returns the number of hits
     const isHit = function(){
         hits = hits + 1;
+        console.log("hitttt");
         return hits;
     }
 

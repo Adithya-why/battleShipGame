@@ -30,7 +30,7 @@
     background-color: aqua;
 }
 
-
+/* color for ships and attacks*/
 .bd.ship{
     background-color: grey;
 }
@@ -47,5 +47,9 @@
 }
 
 .gb2.bd.missedAttack{
+    background-color: black;
+}
+
+.gb1.bd.missedAttack{
     background-color: black;
 }

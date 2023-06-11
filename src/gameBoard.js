@@ -130,7 +130,7 @@ const gameBoard = function(){
         //returns if all ships are sunk
         return alSunk;
     }
-    return {getBoard,placeShip,receiveHit,allSunk,getShip,getSlocs};
+    return {getBoard,placeShip,receiveHit,allSunk,getShip,getSlocs,getMisses};
 }
 
 

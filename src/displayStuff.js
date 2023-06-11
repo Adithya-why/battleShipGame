@@ -93,12 +93,20 @@ const lis = function(gboard,cname){
     let board = gboard.getBoard();
     for(let i = 0;i<10;i++){
         for(let j = 0;j<10;j++){
+            //takes every square
             let ele = document.querySelector(`#${cname}${i}${j}`);
+            //adds listener
+            //whenevr a square is clicked, the receive hi function of gameboard is called with the coordinates of cloicked square
             ele.addEventListener('click',function(e){
                 let c = (e.target.classList)[2];
                 ele.classList.add('missedAttack');
                 let targetSquare = board[c];
-                console.log(targetSquare);
+                let x = c.split("")[0];
+                let y = c.split("")[1];
+                console.log(x,y);
+                gboard.receiveHit(x,y);
+                console.log(gboard.getMisses());
+                
                 
             })
         }
