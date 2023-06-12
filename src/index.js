@@ -10,6 +10,24 @@ import { displayBoard } from './displayStuff.js';
 //and handles interaction between them
 console.log("imports sucess");
 
+//function to display winner messages
+const winnerMessage = function(cname){
+    console.log("All ships have been sunk")
+                    let winner;
+                    if(cname==="gb2"){
+                        console.log("Player wins")
+                        winner = "Player";
+                    }
+                    else{
+                        console.log("Computer wins");
+                        winner = "Computer";
+                    }
+
+                    let main = document.querySelector(".main");
+                    main.replaceChildren();
+                    main.textContent = `${winner} Wins`;
+}
+
 const game = function(){
     let turn = "p";
     const gb1 = gameBoard();
@@ -33,3 +51,5 @@ const game = function(){
 
 game();
 console.log("Finished");
+
+export{winnerMessage};

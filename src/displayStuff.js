@@ -1,5 +1,6 @@
 import { computerPlayer } from "./computerPlayer.js";
 import { player } from "./player.js";
+import { winnerMessage } from "./index.js";
 
 
 
@@ -154,23 +155,11 @@ const lis = function(gboard,cname){
 
 
                
-        
+                //if all ships sunk
+                //then the winner is declared
                 
                 if(gboard.allSunk()){
-                    console.log("All ships have been sunk")
-                    let winner;
-                    if(cname==="gb2"){
-                        console.log("Player wins")
-                        winner = "Player";
-                    }
-                    else{
-                        console.log("Computer wins");
-                        winner = "Computer";
-                    }
-
-                    let main = document.querySelector(".main");
-                    main.replaceChildren();
-                    main.textContent = `${winner} Wins`;
+                    winnerMessage(cname);
                 }
 
 
