@@ -62,10 +62,15 @@ const displayBoard = function(gboard,cname){
 
                 //it selects the startin square of ship and adds class ship
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
-                let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
-                //temp.classList.add('ship');
 
-                
+
+
+                //only the players own ships must be visisble
+                if(cname==="gb1"){
+                let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
+                temp.classList.add('ship');
+
+                }
 
             }
         }
@@ -78,9 +83,12 @@ const displayBoard = function(gboard,cname){
 
                 //it selects the startin square of ship and adds class ship
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
-                let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
-                //temp.classList.add('ship');
 
+
+                if(cname==="gb1"){
+                let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
+                temp.classList.add('ship');
+                }
             }
         }
     }
@@ -110,11 +118,25 @@ const lis = function(gboard,cname){
                 console.log(x,y);
                 //so now we have the coordinates attacked
 
+            
+                //attack happesn using player object
+                //so if player clicks enemy board, attack happens
+
+                if(e.target.classList[1]=="gb2"){
                 let plr = player(gboard);
                 plr.attack(x,y);
+                }
 
-                //gboard.receiveHit(x,y);
+
+               
+        
                 console.log(gboard.allSunk());
+
+
+
+
+
+                //removes event listener 
                 ele.style.pointerEvents = "none";
 
                 
