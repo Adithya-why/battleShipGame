@@ -12,17 +12,17 @@ const computerPlayer = function(enemyGameBoard){
     //selects random coordinates
     let x = Math.floor(Math.random() * 10);
     let y = Math.floor(Math.random() * 10);
-
+    //attacked.push([x,y]);
     let p = true;
 
     //if coorinates attacked already, then new cooridnates are generated
     while(p===true){
-    let x = Math.floor(Math.random() * 10);
-    let y = Math.floor(Math.random() * 10);
     p = false;
     for(let i = 0;i<attacked.length;i++){
         if(attacked[i][0]===x && attacked[i][1]===y){
             p = true;
+            x = Math.floor(Math.random() * 10);
+            y = Math.floor(Math.random() * 10);
         }
     }
 }

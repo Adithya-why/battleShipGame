@@ -1,3 +1,4 @@
+import { computerPlayer } from "./computerPlayer.js";
 import { player } from "./player.js";
 
 
@@ -103,6 +104,7 @@ const displayBoard = function(gboard,cname){
 
 const lis = function(gboard,cname){
     let board = gboard.getBoard();
+    let corp = computerPlayer();
     for(let i = 0;i<10;i++){
         for(let j = 0;j<10;j++){
             //takes every square
@@ -123,9 +125,28 @@ const lis = function(gboard,cname){
                 //so if player clicks enemy board, attack happens
 
                 if(e.target.classList[1]=="gb2"){
+                console.log("PPPPPPPPPPPP")
                 let plr = player(gboard);
                 plr.attack(x,y);
+
+                //now the player has attaacked, computer should attack
+
+                //selects random coordinates from computerPlayer
+                console.log("CCCCCCCCCCCCCC");
+                let cor = corp.attack();
+                console.log(cor);
+
+                //selects that div pointed by cor and clicks it
+                let tbox = document.querySelector(`#gb1${cor[0]}${cor[1]}`);
+                tbox.click();
                 }
+
+
+                if(e.target.classList[1]==="gb1"){
+                    console.log("Clicked by computer");
+                }
+
+
 
 
                

@@ -24,9 +24,9 @@ const game = function(){
 
 
     displayBoard(gb1,"gb1");
-    
-    
     displayBoard(gb2,"gb2");
+
+    
     
 
 }
