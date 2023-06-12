@@ -143,7 +143,11 @@ const lis = function(gboard,cname){
 
 
                 if(e.target.classList[1]==="gb1"){
+                    //now an attack must be made by the computer
                     console.log("Clicked by computer");
+                    let b = gboard.getBoard();
+                    console.log(b);
+                    gboard.receiveHit(x,y);
                 }
 
 
