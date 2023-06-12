@@ -73,6 +73,8 @@ const displayBoard = function(gboard,cname){
                 if(cname==="gb1"){
                 temp.classList.add('ship');
                 }
+
+                //to make it green if clicked, but not visible like gray
                 temp.classList.add('shipa');
 
                 
@@ -123,6 +125,10 @@ const lis = function(gboard,cname){
                 let c = (e.target.classList)[2];
                 ele.classList.add('missedAttack');
 
+
+                //this is to make sure
+                //if a ship is clicked, it turn green instead of black
+                //black is a missedattack
                 if(ele.classList[4] || ele.classList[3]==="shipa"){
                     
                         ele.classList.remove('missedAttack');

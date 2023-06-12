@@ -81,14 +81,22 @@ const comPlaceShips = function(gboard){
 
 const getData = function(gboard){
     let btn = document.querySelector("button");
+    //adds a click listener to button
     btn.addEventListener('click',function(){
         let row = parseInt(document.querySelector("#r").value);
         let col = parseInt(document.querySelector("#c").value);
         let len = parseFloat(document.querySelector("#l").value);
         let ori = document.querySelector("#o").value;
+
+        //gets data from input fields
         console.log(row,col,len,ori);
+
+        //places a ship made from above data
         gboard.placeShip(row,col,len,ori);
 
+
+        //updates the board by
+        //clearing and rendering it again
         document.querySelector(".gb1.board").replaceChildren();
         displayBoard(gboard,"gb1");
     })
@@ -104,6 +112,8 @@ const game = function(){
 
    
     let turn = "p";
+
+    //creates boards
     const gb1 = gameBoard();
     const gb2 = gameBoard();
 
@@ -113,9 +123,16 @@ const game = function(){
 
     //gb1.placeShip(1,1,2,"row");
     //gb1.placeShip(2,3,4,"row");
+
+    //enable user to place ships
     getData(gb1);
+
+
+    //the computer automatically places ships
     comPlaceShips(gb2);
 
+
+    //displays the boards
     displayBoard(gb1,"gb1");
     displayBoard(gb2,"gb2");
 
