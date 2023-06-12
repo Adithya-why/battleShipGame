@@ -75,17 +75,45 @@ const comPlaceShips = function(gboard){
     
 }
 
+
+
+//function to get place ships with input from user
+
+const getData = function(gboard){
+    let btn = document.querySelector("button");
+    btn.addEventListener('click',function(){
+        let row = parseInt(document.querySelector("#r").value);
+        let col = parseInt(document.querySelector("#c").value);
+        let len = parseFloat(document.querySelector("#l").value);
+        let ori = document.querySelector("#o").value;
+        console.log(row,col,len,ori);
+        gboard.placeShip(row,col,len,ori);
+
+        document.querySelector(".gb1.board").replaceChildren();
+        displayBoard(gboard,"gb1");
+    })
+
+
+
+
+}
+
+
+
 const game = function(){
+
+   
     let turn = "p";
     const gb1 = gameBoard();
     const gb2 = gameBoard();
 
+
     const player1 = player();
     const player2 =  computerPlayer();
 
-    gb1.placeShip(1,1,2,"row");
-    gb1.placeShip(2,3,4,"row");
-    //gb2.placeShip(3,1,5,"column");
+    //gb1.placeShip(1,1,2,"row");
+    //gb1.placeShip(2,3,4,"row");
+    getData(gb1);
     comPlaceShips(gb2);
 
     displayBoard(gb1,"gb1");
