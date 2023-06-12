@@ -1,9 +1,31 @@
 .main{
     display: flex;
     width: 98vw;
-    height: 97vh;
+    height: 92vh;
     margin: 0;
     padding: 0;
+
+    font-size: 5rem;
+    text-align: center;
+}
+
+.dt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 body{
