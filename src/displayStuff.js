@@ -68,12 +68,14 @@ const displayBoard = function(gboard,cname){
 
 
                 //only the players own ships must be visisble
-                //if(cname==="gb1"){
+                
                 let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
+                if(cname==="gb1"){
                 temp.classList.add('ship');
+                }
                 temp.classList.add('shipa');
 
-                //}
+                
 
             }
         }
@@ -88,11 +90,12 @@ const displayBoard = function(gboard,cname){
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
 
 
-                //if(cname==="gb1"){
                 let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
+                if(cname==="gb1"){
                 temp.classList.add('ship');
+                }
                 temp.classList.add('shipa');
-                //}
+                
 
             
             }
@@ -120,10 +123,11 @@ const lis = function(gboard,cname){
                 let c = (e.target.classList)[2];
                 ele.classList.add('missedAttack');
 
-                if(ele.classList[4]){
-                    if(ele.classList[4]==="shipa"){
+                if(ele.classList[4] || ele.classList[3]==="shipa"){
+                    
+                        ele.classList.remove('missedAttack');
                         ele.style.backgroundColor = "green";
-                    }
+                    
                 }
 
 
