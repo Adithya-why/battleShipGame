@@ -68,11 +68,11 @@ const displayBoard = function(gboard,cname){
 
 
                 //only the players own ships must be visisble
-                if(cname==="gb1"){
+                //if(cname==="gb1"){
                 let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
                 temp.classList.add('ship');
 
-                }
+                //}
 
             }
         }
@@ -87,10 +87,10 @@ const displayBoard = function(gboard,cname){
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
 
 
-                if(cname==="gb1"){
+                //if(cname==="gb1"){
                 let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
                 temp.classList.add('ship');
-                }
+                //}
             }
         }
     }
