@@ -11,15 +11,16 @@ const player = function(enemyGameBoard){
     //function to attack a given square
     const attack = function(x,y){
 
-    x = 0;
-    y = 0;
-    //checks if the given location is already attacked
     let pre = false;
+
+    //no checking required
+    //checks if the given location is already attacked
+    /*let pre = false;
     for(let i = 0;i<attacked.length;i++){
         if(attacked[i][0]===x && attacked[i][1]===y){
             pre = true;
         }
-    }
+    }*/
 
 
     //if already not attacked

@@ -1,3 +1,7 @@
+import { player } from "./player.js";
+
+
+
 //this file is for DOM interaction
 
 //function displays a given gameboard
@@ -59,7 +63,7 @@ const displayBoard = function(gboard,cname){
                 //it selects the startin square of ship and adds class ship
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
                 let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
-                temp.classList.add('ship');
+                //temp.classList.add('ship');
 
                 
 
@@ -75,7 +79,7 @@ const displayBoard = function(gboard,cname){
                 //it selects the startin square of ship and adds class ship
                 //eventuallly adds to the cooridnate based on row or column to find the next square to add class ship 
                 let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
-                temp.classList.add('ship');
+                //temp.classList.add('ship');
 
             }
         }
@@ -104,8 +108,12 @@ const lis = function(gboard,cname){
                 let x = c.split("")[0];
                 let y = c.split("")[1];
                 console.log(x,y);
-                gboard.receiveHit(x,y);
-                //console.log(gboard.getMisses());
+                //so now we have the coordinates attacked
+
+                let plr = player(gboard);
+                plr.attack(x,y);
+
+                //gboard.receiveHit(x,y);
                 console.log(gboard.allSunk());
                 ele.style.pointerEvents = "none";
 
