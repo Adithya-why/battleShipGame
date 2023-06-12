@@ -71,6 +71,7 @@ const displayBoard = function(gboard,cname){
                 //if(cname==="gb1"){
                 let temp = document.querySelector(`#${cname}${loc[0]}${loc[1]+f}`);
                 temp.classList.add('ship');
+                temp.classList.add('shipa');
 
                 //}
 
@@ -90,7 +91,10 @@ const displayBoard = function(gboard,cname){
                 //if(cname==="gb1"){
                 let temp = document.querySelector(`#${cname}${loc[0]+f}${loc[1]}`);
                 temp.classList.add('ship');
+                temp.classList.add('shipa');
                 //}
+
+            
             }
         }
     }
@@ -115,6 +119,15 @@ const lis = function(gboard,cname){
             ele.addEventListener('click',function(e){
                 let c = (e.target.classList)[2];
                 ele.classList.add('missedAttack');
+
+                if(ele.classList[4]){
+                    if(ele.classList[4]==="shipa"){
+                        ele.style.backgroundColor = "green";
+                    }
+                }
+
+
+                
                 let targetSquare = board[c];
                 let x = c.split("")[0];
                 let y = c.split("")[1];
