@@ -101,7 +101,7 @@ const displayBoard = function(gboard,cname){
 }
 
 //function to to make an attack when a box is clicked
-
+//adds an click listener
 const lis = function(gboard,cname){
     let board = gboard.getBoard();
     let corp = computerPlayer();
@@ -155,14 +155,29 @@ const lis = function(gboard,cname){
 
                
         
-                console.log(gboard.allSunk());
+                
+                if(gboard.allSunk()){
+                    console.log("All ships have been sunk")
+                    let winner;
+                    if(cname==="gb2"){
+                        console.log("Player wins")
+                        winner = "Player";
+                    }
+                    else{
+                        console.log("Computer wins");
+                        winner = "Computer";
+                    }
 
-
+                    let main = document.querySelector(".main");
+                    main.replaceChildren();
+                    main.textContent = `${winner} Wins`;
+                }
 
 
 
                 //removes event listener 
                 ele.style.pointerEvents = "none";
+                
 
                 
             })
